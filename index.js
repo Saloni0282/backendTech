@@ -8,6 +8,9 @@ const PORT = process.env.port||8000
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+app.get('/' , (req,res) => {
+    res.send("Menu Management");
+})
 app.use("/api",router)
 
 app.listen(PORT, async () => {
